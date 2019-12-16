@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jquery Crash Course</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
+    <style>
+        body{
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background:#333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #000;
+            margin-bottom: 10px;
+        }
+        #container{
+            width:90%;
+            margin: auto;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <h1>Jquery Crash Course</h1>
+   </header> 
+   <div id="container">
+       <h3>Mouse Events</h3>
+       
+       <button id="btn1" class="btn-class">Button1</button>
+       <button id="btn2">Button2</button>
+       <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam perspiciatis quibusdam officia fugiat tempore, inventore incidunt sint ullam non! Non dolor eos fuga! Amet voluptatem rerum nesciunt omnis fugiat natus.</p>
+       <!--<h2 id="coords"></h2>-->
+
+        <form id="form">
+            <label>Name</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label>Email</label>
+            <input type="text" id="email" name="email">
+            <br>
+
+            <label>Gender</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+
+
+            <input type="submit" value="Submit">
+        </form>
+
+
+   </div>
+
+   <script>
+        
+    $("document").ready(function(){
+      /*  $("#btn1").click(function(){
+        alert("Button clicked");
+        });
+        $("#btn1").on("click",function(){
+        alert("Button clicked");
+        });
+
+        $("#btn1").on("click",function(){
+
+            //$(".para1").hide();
+            $(".para1").toggle();
+
+        });
+        $("#btn2").on("click",function(){
+
+            $(".para1").show();
+        });
+
+        $("#btn1").dblclick(function(){
+
+            $(".para1").toggle();
+
+        });
+
+        $("#btn1").on("mouseenter",function(){
+
+            $(".para1").toggle();
+
+        });
+        $("#btn1").on("mouseleave",function(){
+
+            $(".para1").toggle();
+
+        });
+        $("#btn1").on("mousemove",function(){
+
+            $(".para1").toggle();
+
+        });
+        $("#btn1").on("mousedown",function(){
+
+            $(".para1").toggle();
+
+        });
+        $("#btn1").on("mouseup",function(){
+
+            $(".para1").toggle();
+
+        });*/
+
+        //$("#btn1").click(function(e){
+
+            /*console.log(e.currentTarget.id);
+            console.log(e.currentTarget.innerHTML);
+            console.log(e.currentTarget.outerHTML);
+            
+            //alert(e.currentTarget.className);
+
+        });
+
+        $(document).on("mousemove",function(e){
+
+            $("#coords").html(e.clientX +" "+ e.clientY);
+
+        });
+
+        $("input").focus(function(){
+
+            //alert("Focus");
+            $(this).css("background", "pink");
+        });
+        $("input").blur(function(){
+
+            //alert("Focus");
+            $(this).css("background", "white");
+        });
+        $("input").keyup(function(e){
+
+            console.log(e.target.value);
+
+        });
+        */
+
+        $("select#gender").change(function(e){
+            console.log(e.target.value);
+
+        });
+
+        $("#form").submit(function(e){
+            e.preventDefault();
+            //console.log("submitted");
+            var name= $("input#name").val();
+            console.log(name);
+        });
+        
+
+
+    });
+
+
+
+</script>
+   
+</body>
+</html>
